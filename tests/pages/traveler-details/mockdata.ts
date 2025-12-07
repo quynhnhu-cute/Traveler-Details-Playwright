@@ -10,7 +10,7 @@ export const MOCK_CONTACT_DATA = {
 export const MOCK_FIRST_TRAVELER = {
   firstName: "Quynh",
   middleName: "Nhu",
-  lastName: "Le"
+  lastName: "Le",
 };
 
 export const MOCK_SECOND_TRAVELER = {

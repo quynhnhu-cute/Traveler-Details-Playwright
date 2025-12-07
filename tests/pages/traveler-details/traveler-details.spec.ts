@@ -1,5 +1,8 @@
 import test, { chromium, expect, Page } from "@playwright/test";
-import { PAYMENT_PAGE_URL, TRAVELER_DETAIL_PAGE_URL } from "../../constants/constants";
+import {
+  PAYMENT_PAGE_URL,
+  TRAVELER_DETAIL_PAGE_URL,
+} from "../../constants/constants";
 import {
   MOCK_CONTACT_DATA,
   MOCK_FIRST_TRAVELER,
@@ -63,10 +66,8 @@ const {
   lastName: cLastNameXPath,
   email: cEmailXPath,
   phone: cPhoneXPath,
-  address: cAddressXPath
-
+  address: cAddressXPath,
 } = CONTACT_X_PATH;
-
 
 const fillContactData = async (page: Page) => {
   await page.fill(cFirstNameXPath, contactFirstName);
@@ -75,7 +76,7 @@ const fillContactData = async (page: Page) => {
   await page.fill(cEmailXPath, contactEmail);
   await page.fill(cPhoneXPath, contactPhone);
   await page.fill(cAddressXPath, contactAddress);
-}
+};
 
 const fillFirstTravelerData = async (page: Page) => {
   await page.fill(t1FirstNameXPath, t1FirstName);
@@ -92,7 +93,7 @@ const fillFirstTravelerData = async (page: Page) => {
     t1MonthOfBirthXPath.value
   );
   await selectAnOption(page, t1NationalityXPath.elm, t1NationalityXPath.value);
-}
+};
 
 const fillSecondTravelerData = async (page: Page) => {
   await page.fill(t2FirstNameXPath, t2FirstName);
@@ -108,10 +109,9 @@ const fillSecondTravelerData = async (page: Page) => {
     t2MonthOfBirthXPath.value
   );
   await selectAnOption(page, t2NationalityXPath.elm, t2NationalityXPath.value);
-}
+};
 
 const inputTravelerDetails = async (page: Page) => {
-
   // 1. Open the page in the new context
   await page.goto(TRAVELER_DETAIL_PAGE_URL, { waitUntil: "networkidle" });
 
@@ -126,7 +126,7 @@ const inputTravelerDetails = async (page: Page) => {
 
   //4. Verify the URL in payment page
   await expect(page).toHaveURL(PAYMENT_PAGE_URL, { timeout: 20000 });
+};
 
-}
-
-test("Hotel booking — fill traveler details and proceed", async ({ page }) => await inputTravelerDetails(page));
+test("Hotel booking — fill traveler details and proceed", async ({ page }) =>
+  await inputTravelerDetails(page));

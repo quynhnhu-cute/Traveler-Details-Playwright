@@ -25,7 +25,8 @@ export const FIRST_TRAVELER_X_PATH = {
   },
   nationality: {
     elm: `xpath=/html/body/div[1]/div/div[2]/main/div/div[2]/div/form/div/div[1]/div/div[5]/div/div[2]/div/div/div/div[6]/div[2]/div/label/div`,
-    value: "//div[contains(@class,'q-item__label')][normalize-space()='Albania (Shqipëri)']"
+    value:
+      "//div[contains(@class,'q-item__label')][normalize-space()='Albania (Shqipëri)']",
   },
 };
 
@@ -47,8 +48,9 @@ export const SECOND_TRAVELER_X_PATH = {
   },
   nationality: {
     elm: `xpath=/html/body/div[1]/div/div[2]/main/div/div[2]/div/form/div/div[1]/div/div[6]/div/div[2]/div/div/div/div[6]/div[2]/div/label/div`,
-    value: "//div[contains(@class,'q-item__label')][normalize-space()='Albania (Shqipëri)']"
+    value:
+      "//div[contains(@class,'q-item__label')][normalize-space()='Albania (Shqipëri)']",
   },
 };
 
-export const CONTINUE_X_PATH = `xpath=/html/body/div[1]/div/div[2]/main/div/div[2]/div/form/div/div[2]/div/div[3]/button`
+export const CONTINUE_X_PATH = `xpath=/html/body/div[1]/div/div[2]/main/div/div[2]/div/form/div/div[2]/div/div[3]/button`;
