@@ -8,3 +8,5 @@
 
 5. Please checkout to master to run the automation test.
 
+Thanks for reviewing!
+
